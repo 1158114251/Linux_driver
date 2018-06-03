@@ -6,6 +6,6 @@ modules:
 	$(MAKE) -C $(KERDIR) M=$(shell pwd) 
 
 clean:
-	rm -rf *.o *.ko *mod*  *Mod*
+	rm -rf .*cmd  *.o *.ko *mod*  *Mod* 
 
 obj-m = $(MODNAME).o 

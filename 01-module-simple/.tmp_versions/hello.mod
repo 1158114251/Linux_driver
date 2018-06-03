@@ -1,2 +1,2 @@
-/home/linux/01-module-default/hello.ko
-/home/linux/01-module-default/hello.o
+/home/linux/Linux_driver/01-module-simple/hello.ko
+/home/linux/Linux_driver/01-module-simple/hello.o

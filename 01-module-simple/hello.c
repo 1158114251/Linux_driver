@@ -4,22 +4,20 @@
 /* 许可证声明 */
 MODULE_LICENSE("GPL");
 
-/* 模块加载函数，当向内核中插入这个模块的时候会被调用 */
-int init_module(void)
+static int __init hello_init(void)
 {
-	//做初始化的动作
 	printk("-- %s called --\n", __FUNCTION__);
 
 	return 0;
 }
 
-module_init()
 
-/* 模块的卸载函数，当从内核中把本模块删除的时候被调用 */
-void cleanup_module(void)
+static void __exit hello_exit (void)
 {
-	//做和init_module相反的动作
 	printk("-- %s called --\n", __FUNCTION__);
 
 	return ;
 }
+
+module_init(hello_init);
+module_exit(hello_exit);
